@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: icmr-search
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ICMR_HF_INDEX_BASE
+        value: https://huggingface.co/datasets/Nasskeke/icrm-hitek-full-db-mixed/resolve/main
+      - key: ICMR_INDEX_SOURCE
+        value: remote
+      - key: ICMR_PARALLEL
+        value: "4"
+      - key: ICMR_THREADS_PER_CONN
+        value: "2"
+      - key: PYTHON_VERSION
+        value: "3.11.0"
