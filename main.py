@@ -251,8 +251,8 @@ def root():
             "/health": "Health check",
             "/docs": "Swagger UI"
         },
-        "developer": "@kzr0x",
-        "channel": "@api_wallah"
+        "developer": "@monster13",
+       
     }
 
 @fastapi_app.get("/health")
@@ -455,7 +455,7 @@ def build_ui():
         gr.Markdown(
             "---\n"
             "<div class='footer'>"
-            "👨‍💻 **Developer:** @kzr0x | 📢 **Channel:** @api_wallah"
+            "👨‍💻 **Developer:** @monster13 | 🥀 **Instagram:**@anime.boy.30"
             "</div>",
             elem_classes="footer"
         )
